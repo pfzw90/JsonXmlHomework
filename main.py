@@ -27,7 +27,7 @@ def get_sorted(unsorted_list):
     words = {}
     for word in unsorted_list:
       if word not in words.keys():
-        words.update({word : 1})
+        words[word] = 1
       else:
         words[word] += 1
     return sorted(list(words.items()),key=lambda x: -x[1])
